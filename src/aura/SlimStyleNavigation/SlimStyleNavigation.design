@@ -1,0 +1,103 @@
+<design:component>
+    
+    <design:attribute 
+                      name="headerFixed"
+                      label="Is header fixed?" 
+                      />    
+    <design:attribute 
+                      name="headerHeight"
+                      label="Header Height (px)" 
+                      />    
+    <design:attribute 
+                      name="fontSize"
+                      label="Font Size (px)" 
+                      />    
+    <design:attribute 
+                      name="blockSize"
+                      label="Block Size (%)" 
+                      />    
+    <design:attribute 
+                      name="color"
+                      label="Text Color (rgb)" 
+                      />    
+    <design:attribute 
+                      name="bgColor"
+                      label="Background Color (rgb)" 
+                      />    
+    <design:attribute 
+                      name="bgColorTransparent"
+                      label="Background  Opacity"
+                      description="(opacity) 1..0 (transparent)"
+                      datasource="0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0"
+                      />        
+    <design:attribute 
+                      name="show1"
+                      label="Name #1" 
+                      />   
+    <design:attribute 
+                      name="url1"
+                      label="URL #1" 
+                      />
+    
+    <design:attribute 
+                      name="show1Profile"
+                      label="Profiles to view Name #1 (Separated by commas)" 
+                      />
+    <design:attribute 
+                      name="show2"
+                      label="Name #2" 
+                      />
+
+    <design:attribute 
+                      name="url2"
+                      label="URL #2" 
+                      />
+    
+     <design:attribute 
+                      name="show2Profile"
+                      label="Profiles to view Name #2 (Separated by commas)" 
+                      />
+    
+    <design:attribute 
+                      name="show3"
+                      label="Name #3" 
+                      />
+ 
+    <design:attribute 
+                      name="url3"
+                      label="URL #3" 
+                      />
+    
+     <design:attribute 
+                      name="show3Profile"
+                      label="Profiles to view Name #3 (Separated by commas)" 
+                      />
+    <design:attribute 
+                      name="show4"
+                      label="Name #4" 
+                      />
+    <design:attribute 
+                      name="url4"
+                      label="URL #4" 
+                      />
+    
+    <design:attribute 
+                      name="show4Profile"
+                      label="Profiles to view Name #4 (Separated by commas)" 
+                      />
+    
+    <design:attribute 
+                      name="show5"
+                      label="Name #5" 
+                      />
+    <design:attribute 
+                      name="url5"
+                      label="URL #5" 
+                      />
+    
+    <design:attribute 
+                      name="show5Profile"
+                      label="Profiles to view Name #5 (Separated by commas)" 
+                      />
+    
+</design:component>

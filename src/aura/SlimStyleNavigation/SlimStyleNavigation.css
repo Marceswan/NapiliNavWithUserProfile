@@ -1,0 +1,207 @@
+.THIS {
+    z-index: 9999;
+}
+.THIS.space {
+    position: static;
+}
+.THIS .cBrandingLogo:focus {
+    box-shadow: none;
+}
+
+@media (min-width: 800px){
+    .THIS.header {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        overflow: hidden;
+    }
+    .THIS .menu{
+        display: inline-table;
+        table-layout: initial;
+        height: inherit;
+        width: 85%;   
+        background-color: transparent !important;
+    }   
+    .THIS ul {
+        margin: 0;
+        padding: 0;
+    }    
+    .THIS .header-trigger, .THIS .header-dummy {
+        display: none;
+    }    
+    .THIS .header-title {
+        display: table-cell;
+        vertical-align: middle;
+        height: inherit;
+        width: 20%;
+    }  
+    .THIS .header-title a{
+        text-align: right;
+        margin: 0 20px 0 auto;
+        max-width: 200px;
+    }   
+    .THIS .menu-item, .THIS .header-block{
+        vertical-align: middle;
+        display: table-cell;
+        height: inherit;
+        text-align: center;
+        padding: 0 15px 0 15px;
+        border: none !important;
+    }
+    .THIS .menu-item a{
+        opacity: 0.5;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }   
+    .THIS .menu-item:hover a, .THIS .menu-item a.active{
+        opacity: 1.0;
+    }       
+    .THIS .transparent {
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+    .THIS.header {
+        width: 100%;
+        table-layout: fixed;        
+    }
+    .THIS .header-trigger {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 20%;
+        height: inherit;
+    }   
+    .THIS .header-title {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        height: inherit;
+        width: 800px;
+    }
+    .THIS .header-dummy {
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 20%;
+        height: inherit;
+    }
+    .THIS .header-title a{
+        margin: 0 auto;
+    }  
+    .THIS .menu{
+        visibility: hidden;
+        margin: 0;
+        padding-top: 0px;
+        padding-left: 65px;
+        position: relative;
+        -moz-transition: .5s;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        -ms-transition: .5s;
+        transition: .5s;
+        opacity: 0;
+        top: -20%;
+    }      
+    .THIS .menu.active {
+        visibility: visible;
+        margin: 0;
+        padding-top: 0px;
+        padding-left: 65px;
+        position: relative;
+        -moz-transition: .3s;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        -ms-transition: .3s;
+        transition: .3s;
+        opacity: 1.0;
+        top: 0;
+    }      
+    .THIS .menu .menu-item{
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        visibility: hidden;
+        opacity: 1.0;
+    }
+    .THIS .menu.active .menu-item{
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;        
+        visibility: visible;
+        opacity: 1.0;
+    }    
+    .THIS .menu-item a{
+        opacity: 1.0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .THIS .menu-item:hover a{
+        opacity: 0.5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .THIS .header-block {
+        display: none;
+    }  
+    .THIS .menu-trigger, .THIS .menu-trigger span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+    }
+    .THIS .menu-trigger {
+        position: relative;
+        width: 25px;
+        height: 17px;
+    }
+    .THIS .menu-trigger span {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+    }
+    .THIS .menu-trigger span:nth-of-type(1) {
+        top: 0;
+        opacity: 0.9;
+    }
+    .THIS .menu-trigger span:nth-of-type(2) {
+        top: 8px;
+        opacity: 0.9;
+    }
+    .THIS .menu-trigger span:nth-of-type(3) {
+        top: 16px;
+        opacity: 0.9;
+    }   
+    .THIS .menu-trigger.active span:nth-of-type(1) {
+        -webkit-transform: translateY(8px) rotate(-135deg);
+        transform: translateY(8px) rotate(-135deg);
+        opacity: 0.7;
+    }
+    .THIS .menu-trigger.active span:nth-of-type(2) {
+        -webkit-transform: translateY(0px) rotate(-180deg);
+        transform: translateY(0px) rotate(-180deg);
+        opacity: 0;
+    }
+    .THIS .menu-trigger.active span:nth-of-type(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+        opacity: 0.7;
+    }
+    .THIS .transparent {
+        display: none;
+    }   
+    .THIS .transparent.active {
+        height: 2000px;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }   
+}

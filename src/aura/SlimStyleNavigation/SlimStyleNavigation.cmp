@@ -1,0 +1,98 @@
+<aura:component description="Slim Style Navigation for Community Builder"             
+                implements="forceCommunity:availableForAllPageTypes" access="global" controller="SlimStyleNavigationController">
+
+    <!--Show Character-->
+    <aura:attribute name="show1" type="String" default="Menu1"/>
+    <aura:attribute name="show2" type="String" default="Menu2"/>
+    <aura:attribute name="show3" type="String" default="Menu3"/>
+    <aura:attribute name="show4" type="String" default="Menu4"/>
+    <aura:attribute name="show5" type="String" default="Menu5"/>
+    
+    <!--Show Character-->
+    <aura:attribute name="show1Profile" type="String" default="System Administrator"/>
+    <aura:attribute name="show2Profile" type="String" default="System Administrator"/>
+    <aura:attribute name="show3Profile" type="String" default="System Administrator"/>
+    <aura:attribute name="show4Profile" type="String" default="System Administrator"/>
+    <aura:attribute name="show5Profile" type="String" default="System Administrator"/>
+    
+    <!-- -->
+    <aura:attribute name="view1" type="Boolean" default="true"/>
+    <aura:attribute name="view2" type="Boolean" default="true"/>
+    <aura:attribute name="view3" type="Boolean" default="true"/>
+    <aura:attribute name="view4" type="Boolean" default="true"/>
+    <aura:attribute name="view5" type="Boolean" default="true"/>
+
+    <!--Link URL-->    
+    <aura:attribute name="url0" type="String" default="/"/>
+    <aura:attribute name="url1" type="String" default="/"/>
+    <aura:attribute name="url2" type="String" default="/"/>
+    <aura:attribute name="url3" type="String" default="/"/>
+    <aura:attribute name="url4" type="String" default="/"/>
+    <aura:attribute name="url5" type="String" default="/"/>
+    
+    <!--Element Size-->
+    <aura:attribute name="headerFixed" type="boolean" default="true"/>    
+    <aura:attribute name="headerHeight" type="Integer" default="50"/>
+    <aura:attribute name="fontSize" type="Integer" default="15"/>
+    <aura:attribute name="blockSize" type="Integer" default="50"/>
+
+    <!--Element Color-->    
+    <aura:attribute name="color" type="String" default="255,255,255"/>
+    <aura:attribute name="bgColor" type="String" default="22,50,92"/>
+    <aura:attribute name="bgColorTransparent" type="String" default="1.0"/>    
+    
+    <!--System Internal Use-->
+    <aura:attribute name="menuNumber" type="Integer" default="5"/>
+    <aura:attribute name="currentPage" type="String" default="0"/>
+    <aura:attribute name="countClick" type="Integer" default="0"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <!--Component-->
+    <div class="header" aura:id="header">
+         <span class="header-trigger" onclick="{!c.toggleMenu}">
+            <a aura:id="toggle" class="menu-trigger">
+                <span aura:id="toggleSpan"></span>
+                <span aura:id="toggleSpan"></span>
+                <span aura:id="toggleSpan"></span>
+            </a>
+        </span>       
+        <span class="header-title">
+            <a class="cBrandingLogo" aura:id="brandLogo" onclick="{!c.menuItemClick}" ontouchstart="{!c.menuItemClick}" value="0"></a>
+        </span>
+        <span class="header-dummy"></span>
+        <ul class="menu" aura:id="menu">
+            <aura:renderIf isTrue="{!v.view1}">
+                <li class="menu-item" aura:id="item1">
+                    <a href="" onclick="{!c.menuItemClick}" ontouchstart="{!c.menuItemClick}" aura:id="atext1" value="1">{!v.show1}</a>
+                </li>
+            </aura:renderIf>
+            <aura:renderIf isTrue="{!v.view2}">
+                <li class="menu-item" aura:id="item2">
+                    <a href="" onclick="{!c.menuItemClick}" ontouchstart="{!c.menuItemClick}" aura:id="atext2" value="2">{!v.show2}</a>
+                </li>
+            </aura:renderIf>
+            <aura:renderIf isTrue="{!v.view3}">
+                <li class="menu-item" aura:id="item3">
+                    <a href="" onclick="{!c.menuItemClick}" ontouchstart="{!c.menuItemClick}" aura:id="atext3" value="3">{!v.show3}</a>
+                </li>
+            </aura:renderIf>
+            <aura:renderIf isTrue="{!v.view4}">
+                <li class="menu-item" aura:id="item4">
+                    <a href="" onclick="{!c.menuItemClick}" ontouchstart="{!c.menuItemClick}" aura:id="atext4" value="4">{!v.show4}</a>
+                </li>
+            </aura:renderIf>
+            <aura:renderIf isTrue="{!v.view5}">
+                <li class="menu-item" aura:id="item5">
+                    <a href="" onclick="{!c.menuItemClick}" ontouchstart="{!c.menuItemClick}" aura:id="atext5" value="5">{!v.show5}</a>
+                </li>
+            </aura:renderIf>
+            <li class="header-block" aura:id="block">
+            </li>            
+        </ul>   
+        <span class="transparent" onclick="{!c.beShrink}" ontouchmove="{!c.beShrink}" aura:id="transparent">
+        </span>
+    </div>
+    <div aura:id="space" class="space">
+    </div>
+</aura:component>
